@@ -1,4 +1,4 @@
-package com.sherman.rest;
+package rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
