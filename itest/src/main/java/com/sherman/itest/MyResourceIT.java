@@ -1,16 +1,19 @@
 package com.sherman.itest;
 
 import com.google.inject.Inject;
+import com.sherman.entity.Word;
+import com.sherman.itest.util.ITestRunner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import sherman.entity.Word;
+import org.junit.runner.RunWith;
 
 import javax.persistence.EntityManager;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+@RunWith(ITestRunner.class)
 public class MyResourceIT {
 
     @Inject
@@ -18,15 +21,15 @@ public class MyResourceIT {
 
     @Before
     public void before() {
-//        em = Persistence.createEntityManagerFactory("h2DB").createEntityManager();
-
+        if (!em.getTransaction().isActive()) {
+            em.getTransaction().begin();
+        }
     }
 
     @After
     public void after() {
-        if (em != null && em.getTransaction().isActive()) {
-            em.getTransaction().commit();
-
+        if (!em.getTransaction().isActive()) {
+            em.getTransaction().rollback();
         }
     }
 
@@ -34,8 +37,6 @@ public class MyResourceIT {
     public void test() {
 
         assertNotNull("em cannot be null ", em);
-        em.getTransaction().begin();
-
         Word w = new Word();
         w.setText("elo");
 

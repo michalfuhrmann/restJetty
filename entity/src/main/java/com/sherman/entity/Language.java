@@ -1,4 +1,4 @@
-package sherman.entity;
+package com.sherman.entity;
 
 
 public enum Language {

@@ -1,4 +1,4 @@
-package sherman.entity;
+package com.sherman.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +11,6 @@ public class IdBase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
 
     public Integer getId() {
         return id;

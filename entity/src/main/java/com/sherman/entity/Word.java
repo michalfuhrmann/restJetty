@@ -1,4 +1,4 @@
-package sherman.entity;
+package com.sherman.entity;
 
 import com.google.common.collect.Lists;
 
@@ -17,7 +17,6 @@ public class Word extends IdBase {
 
     @OneToMany
     private List<Word> translations;
-
 
     public String getText() {
         return text;
