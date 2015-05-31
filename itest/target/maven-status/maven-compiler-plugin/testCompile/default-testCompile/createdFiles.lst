@@ -1,0 +1,8 @@
+com\sherman\itest\ITestServletModule.class
+com\sherman\itest\RegistryModule.class
+com\sherman\itest\testcase\entity\WordIT.class
+com\sherman\itest\util\ITestRunner.class
+com\sherman\itest\testcase\BaseTest.class
+com\sherman\itest\testcase\entity\BaseEntityTest.class
+com\sherman\itest\testcase\entity\WordRecordIT.class
+com\sherman\itest\ITestConextListener.class
