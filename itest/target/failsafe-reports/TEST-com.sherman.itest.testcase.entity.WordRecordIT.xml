@@ -1,66 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sherman.itest.testcase.entity.WordRecordIT" time="0.028" tests="4" errors="0" skipped="0" failures="0">
+<testsuite name="com.sherman.itest.testcase.entity.WordRecordIT" time="0.109" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Java\jdk1.8.45\jre\bin"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk1.8.0_45/jre/lib/amd64"/>
     <property name="java.vm.version" value="25.45-b02"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=";"/>
+    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.script" value=""/>
-    <property name="user.country" value="PL"/>
+    <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\DEV\workspace\web-word-learner"/>
-    <property name="java.runtime.version" value="1.8.0_45-b15"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Java\jdk1.8.45\jre\lib\endorsed"/>
+    <property name="user.dir" value="/ssd/kdeveloper/workspace/random/restJetty"/>
+    <property name="java.runtime.version" value="1.8.0_45-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/jdk1.8.0_45/jre/lib/endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="D:\cygwin64\tmp\"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\DEV\maven-3.2.3/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.library.path" value="C:\Java\jdk1.8.45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\cygwin64\usr\local\bin;D:\cygwin64\bin;C:\Java\jdk1.7.0_72;D:\DEV\maven-3.2.3\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Microsoft SQL Server\110\Tools\Binn;D:\DEV\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn;C:\Program Files\Microsoft SQL Server\100\Tools\Binn;C:\Program Files\Microsoft SQL Server\100\DTS\Binn;D:\Vagrant\bin;C:\Program Files (x86)\Skype\Phone;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;."/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/local/apache-maven-3.0.4/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="6.1"/>
-    <property name="user.home" value="C:\Users\Sherman"/>
-    <property name="user.timezone" value="Europe/Belgrade"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="os.version" value="3.2.0-83-generic"/>
+    <property name="user.home" value="/home/kdeveloper"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="Cp1250"/>
-    <property name="user.name" value="Sherman"/>
-    <property name="java.class.path" value="D:\DEV\maven-3.2.3/boot/plexus-classworlds-2.5.1.jar"/>
+    <property name="user.name" value="kdeveloper"/>
+    <property name="java.class.path" value="/usr/local/apache-maven-3.0.4/boot/plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Java\jdk1.8.45\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk1.8.0_45/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -s /home/kdeveloper/.m2/home-settings.xml clean verify"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="pl"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="1.8.0_45"/>
-    <property name="java.ext.dirs" value="C:\Java\jdk1.8.45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Java\jdk1.8.45\jre\lib\resources.jar;C:\Java\jdk1.8.45\jre\lib\rt.jar;C:\Java\jdk1.8.45\jre\lib\sunrsasign.jar;C:\Java\jdk1.8.45\jre\lib\jsse.jar;C:\Java\jdk1.8.45\jre\lib\jce.jar;C:\Java\jdk1.8.45\jre\lib\charsets.jar;C:\Java\jdk1.8.45\jre\lib\jfr.jar;C:\Java\jdk1.8.45\jre\classes"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/jdk1.8.0_45/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/jdk1.8.0_45/jre/lib/resources.jar:/usr/lib/jvm/jdk1.8.0_45/jre/lib/rt.jar:/usr/lib/jvm/jdk1.8.0_45/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.8.0_45/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.8.0_45/jre/lib/jce.jar:/usr/lib/jvm/jdk1.8.0_45/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.8.0_45/jre/lib/jfr.jar:/usr/lib/jvm/jdk1.8.0_45/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="D:\DEV\maven-3.2.3"/>
-    <property name="file.separator" value="\"/>
+    <property name="maven.home" value="/usr/local/apache-maven-3.0.4"/>
+    <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.desktop" value="windows"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testWordRecordForOneWordCanBeDuplicated" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.005"/>
-  <testcase name="testWordRecordCanBeCreatedBidirectionally" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.008"/>
-  <testcase name="testWordRecordDoesNotAllowDuplicates" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.007"/>
-  <testcase name="testSaving" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.008"/>
+  <testcase name="testWordRecordForOneWordCanBeDuplicated" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.057"/>
+  <testcase name="testWordRecordCanBeCreatedBidirectionally" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.015"/>
+  <testcase name="testWordRecordDoesNotAllowDuplicates" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.013"/>
+  <testcase name="testSaving" classname="com.sherman.itest.testcase.entity.WordRecordIT" time="0.024"/>
 </testsuite>

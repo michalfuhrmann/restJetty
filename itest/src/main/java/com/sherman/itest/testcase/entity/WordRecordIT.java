@@ -66,7 +66,7 @@ public class WordRecordIT extends BaseEntityTest {
 
 
     @Test
-    public void testWordRecordForOneWordCanBeDuplicated() {
+    public void testWordRecordConstraints() {
         Word w1 = getWord("polish", Language.POLISH);
         Word w2 = getWord("english", Language.ENGLISH);
         Word w3 = getWord("german", Language.GERMAN);

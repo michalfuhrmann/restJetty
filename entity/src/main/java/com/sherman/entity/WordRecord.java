@@ -4,17 +4,21 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"parentWord", "translationWord"}))
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"parentWord", "translationWord", "app_user"}))
 public class WordRecord extends IdBase {
 
 
     @ManyToOne
-    @JoinColumn(name = "parentWord")
+    @JoinColumn(name = "parentWord", nullable = false)
     private Word parentWord;
 
     @ManyToOne
-    @JoinColumn(name = "translationWord")
+    @JoinColumn(name = "translationWord", nullable = false)
     private Word translationWord;
+
+    @ManyToOne
+    @JoinColumn(name = "app_user", nullable = false)
+    private User user;
 
     @Column
     private LocalDate lastDate;
@@ -24,6 +28,7 @@ public class WordRecord extends IdBase {
 
     @Column
     private Integer correctAnswersCount;
+
 
     public Word getParentWord() {
         return parentWord;
@@ -63,6 +68,14 @@ public class WordRecord extends IdBase {
 
     public void setCorrectAnswersCount(Integer correctAnswersCount) {
         this.correctAnswersCount = correctAnswersCount;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
 
