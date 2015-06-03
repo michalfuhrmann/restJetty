@@ -1,6 +1,7 @@
 package com.sherman.itest.testcase.entity;
 
 import com.sherman.entity.Language;
+import com.sherman.entity.User;
 import com.sherman.entity.Word;
 import com.sherman.entity.WordRecord;
 import com.sherman.itest.util.ITestRunner;
@@ -18,10 +19,11 @@ public class WordRecordIT extends BaseEntityTest {
 
     @Test
     public void testSaving() {
-        Word w1 = getWord("polish", Language.POLISH);
-        Word w2 = getWord("english", Language.ENGLISH);
+        Word w1 = getWordAndPersist("polish", Language.POLISH);
+        Word w2 = getWordAndPersist("english", Language.ENGLISH);
+        User u1 = getUserAndPersist("user1", "password", "userName");
 
-        WordRecord wordRecord = getWordRecord(w1, w2);
+        WordRecord wordRecord = getWordRecordAndPersist(w1, w2, u1);
 
         em.flush();
         em.clear();
@@ -35,11 +37,12 @@ public class WordRecordIT extends BaseEntityTest {
 
     @Test
     public void testWordRecordCanBeCreatedBidirectionally() {
-        Word w1 = getWord("polish", Language.POLISH);
-        Word w2 = getWord("english", Language.ENGLISH);
+        Word w1 = getWordAndPersist("polish", Language.POLISH);
+        Word w2 = getWordAndPersist("english", Language.ENGLISH);
+        User u1 = getUserAndPersist("user1", "password", "userName");
 
-        WordRecord wordRecord = getWordRecord(w1, w2);
-        WordRecord wordRecord2 = getWordRecord(w2, w1);
+        WordRecord wordRecord = getWordRecordAndPersist(w1, w2, u1);
+        WordRecord wordRecord2 = getWordRecordAndPersist(w2, w1, u1);
 
         em.flush();
         em.clear();
@@ -54,11 +57,12 @@ public class WordRecordIT extends BaseEntityTest {
 
     @Test(expected = PersistenceException.class)
     public void testWordRecordDoesNotAllowDuplicates() {
-        Word w1 = getWord("polish", Language.POLISH);
-        Word w2 = getWord("english", Language.ENGLISH);
+        Word w1 = getWordAndPersist("polish", Language.POLISH);
+        Word w2 = getWordAndPersist("english", Language.ENGLISH);
+        User u1 = getUserAndPersist("user1", "password", "userName");
 
-        WordRecord wordRecord = getWordRecord(w1, w2);
-        WordRecord wordRecord2 = getWordRecord(w1, w2);
+        WordRecord wordRecord = getWordRecordAndPersist(w1, w2, u1);
+        WordRecord wordRecord2 = getWordRecordAndPersist(w1, w2, u1);
 
         em.flush();
         em.clear();
@@ -66,36 +70,45 @@ public class WordRecordIT extends BaseEntityTest {
 
 
     @Test
-    public void testWordRecordConstraints() {
-        Word w1 = getWord("polish", Language.POLISH);
-        Word w2 = getWord("english", Language.ENGLISH);
-        Word w3 = getWord("german", Language.GERMAN);
+    public void shouldAllowInsertWordRecordWithSameWordsButDifferentUsers() {
+        Word w1 = getWordAndPersist("polish", Language.POLISH);
+        Word w2 = getWordAndPersist("english", Language.ENGLISH);
+        User u1 = getUserAndPersist("user1", "password", "userName");
+        User u2 = getUserAndPersist("user2", "password2", "userName");
 
-
-        WordRecord wordRecord = getWordRecord(w1, w2);
-        WordRecord wordRecord2 = getWordRecord(w1, w3);
+        WordRecord wordRecord = getWordRecordAndPersist(w1, w2, u1);
+        WordRecord wordRecord2 = getWordRecordAndPersist(w1, w2, u2);
 
         em.flush();
         em.clear();
     }
 
 
-    private Word getWord(String text, Language language) {
+    private Word getWordAndPersist(String text, Language language) {
         Word w1 = new Word();
         w1.setText(text);
         w1.setLanguage(language);
-
         em.persist(w1);
         return w1;
     }
 
-    private WordRecord getWordRecord(Word w1, Word w2) {
+    private WordRecord getWordRecordAndPersist(Word w1, Word w2, User user) {
         WordRecord wordRecord = new WordRecord();
         wordRecord.setParentWord(w1);
         wordRecord.setTranslationWord(w2);
+        wordRecord.setUser(user);
         em.persist(wordRecord);
         return wordRecord;
     }
 
+    private User getUserAndPersist(String login, String password, String name) {
+
+        User user = new User();
+        user.setLogin(login);
+        user.setPassword(password);
+        user.setName(name);
+        em.persist(user);
+        return user;
+    }
 
 }
