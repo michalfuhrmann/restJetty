@@ -3,16 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>web-word-learner</artifactId>
+        <artifactId>web-word-learner-service</artifactId>
         <groupId>com.sherman</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>web-word-learner-core</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>../service</module>
-    </modules>
+    <artifactId>web-word-learner-service-impl</artifactId>
+    <dependencies>
 
+
+        <!--MODULES-->
+        <dependency>
+            <groupId>com.sherman</groupId>
+            <artifactId>web-word-learner-service-api</artifactId>
+        </dependency>
+
+
+    </dependencies>
 </project>

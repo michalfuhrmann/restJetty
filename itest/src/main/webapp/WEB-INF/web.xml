@@ -27,6 +27,6 @@
     </filter-mapping>
 
     <listener>
-        <listener-class>com.sherman.itest.ITestConextListener</listener-class>
+        <listener-class>com.word.learner.itest.ITestConextListener</listener-class>
     </listener>
 </web-app>

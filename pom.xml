@@ -42,6 +42,7 @@
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>org.glassfish.jersey</groupId>
                 <artifactId>jersey-bom</artifactId>
@@ -49,7 +50,17 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!--MODULES -->
+            <dependency>
+                <groupId>com.sherman</groupId>
+                <artifactId>web-word-learner-service-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sherman</groupId>
+                <artifactId>web-word-learner-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!--CORE -->
             <dependency>
                 <groupId>com.google.inject</groupId>

@@ -9,10 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>web-word-learner-core</artifactId>
+    <artifactId>web-word-learner-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>../service</module>
+        <module>api</module>
+        <module>impl</module>
     </modules>
+
 
 </project>
