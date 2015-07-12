@@ -9,6 +9,7 @@
 *.war
 *.ear
 /target/
+*/target/*
 /itest/target
 
 *.iml

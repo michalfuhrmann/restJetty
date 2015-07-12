@@ -5,10 +5,12 @@ import com.google.common.collect.Lists;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
 
 @Entity
-public class User {
+@Table(name = "app_user")
+public class User extends IdBase{
 
     @Column(nullable = false, unique = true)
     private String login;

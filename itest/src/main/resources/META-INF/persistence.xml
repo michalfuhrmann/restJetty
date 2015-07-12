@@ -6,6 +6,7 @@
                       transaction-type="RESOURCE_LOCAL">
 
 
+        <class>com.sherman.entity.User</class>
         <class>com.sherman.entity.Word</class>
         <class>com.sherman.entity.IdBase</class>
         <class>com.sherman.entity.WordRecord</class>
