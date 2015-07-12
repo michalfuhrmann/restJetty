@@ -1,0 +1,5 @@
+com\word\learner\service\impl\LearningService.class
+com\word\learner\service\impl\ServiceRegistryModule.class
+com\word\learner\service\impl\RegistrationService.class
+com\word\learner\service\impl\UserService.class
+com\word\learner\service\impl\WordRecordService.class

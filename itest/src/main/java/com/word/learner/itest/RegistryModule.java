@@ -2,6 +2,7 @@ package com.word.learner.itest;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import com.word.learner.service.api.IWordRecordService;
 
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;
@@ -13,7 +14,6 @@ import java.util.Map;
 public class RegistryModule extends AbstractModule {
     @Override
     protected void configure() {
-
     }
 
 //    private static final ThreadLocal<EntityManager> ENTITY_MANAGER_CACHE

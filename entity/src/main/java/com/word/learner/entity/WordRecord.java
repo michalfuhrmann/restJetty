@@ -1,6 +1,7 @@
 package com.word.learner.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -25,9 +26,11 @@ public class WordRecord extends IdBase {
     private LocalDate lastDate;
 
     @Column
+    @Min(value = 0)
     private Integer answersCount;
 
     @Column
+    @Min(value = 0)
     private Integer correctAnswersCount;
 
     @Override

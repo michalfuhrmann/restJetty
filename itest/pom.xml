@@ -22,6 +22,9 @@
     <!--</build>-->
 
     <dependencies>
+
+
+
         <!--CORE-->
         <dependency>
             <groupId>javax</groupId>
@@ -65,8 +68,15 @@
         <!--MODULES-->
         <dependency>
             <groupId>com.sherman</groupId>
+            <artifactId>web-word-learner-service-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sherman</groupId>
+            <artifactId>web-word-learner-service-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sherman</groupId>
             <artifactId>web-word-learner-entity</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
 

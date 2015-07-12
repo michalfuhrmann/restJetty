@@ -11,8 +11,6 @@
 
     <artifactId>web-word-learner-core</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>../service</module>
-    </modules>
+
 
 </project>

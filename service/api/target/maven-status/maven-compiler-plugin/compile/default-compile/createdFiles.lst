@@ -1,2 +1,6 @@
+com\word\learner\service\api\IRegistrationService.class
+com\word\learner\service\api\ILearningService.class
 com\word\learner\service\api\IUserService.class
-com\word\learner\service\api\IWordService.class
+com\word\learner\service\api\IWordRecordService.class
+com\word\learner\service\api\NoSuchWordException.class
+com\word\learner\service\api\UserAuthenticationException.class

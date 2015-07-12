@@ -10,8 +10,9 @@
     <modules>
         <module>entity</module>
         <module>core</module>
-        <module>itest</module>
         <module>rest</module>
+        <module>service</module>
+        <module>itest</module>
     </modules>
     <name>simple-service-webapp</name>
 
@@ -54,6 +55,11 @@
             <dependency>
                 <groupId>com.sherman</groupId>
                 <artifactId>web-word-learner-service-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sherman</groupId>
+                <artifactId>web-word-learner-service-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
